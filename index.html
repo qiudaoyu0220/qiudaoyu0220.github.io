@@ -1,9 +1,12 @@
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-<title>秋刀鱼</title>
-<link rel="icon" type="image/jpg" sizes="32x32" href="https://pan.tenire.com/view.php/0d760576f5c2fd9ea6688c089cc40fed.jpg">
-<meta charset="UTF-8"> 
+<title>秋老师的祝福</title>
+<!-- 网页图标：替换为随机图片（32x32尺寸适配图标） -->
+<link rel="icon" type="image/jpg" sizes="32x32" href="https://picsum.photos/32/32?random=1">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="description" content="给秋老师的专属祝福网页">
 <style>
   * {
     margin: 0;
@@ -11,111 +14,111 @@
     box-sizing: border-box;
   }
   html, body {
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    background: linear-gradient(135deg, #121212, #2d2d2d);
     min-height: 100vh;
-    padding: 20px 15px;
+    padding: 15px;
     user-select: none;
     -webkit-user-select: none;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     position: relative;
-    overflow: auto; 
+    overflow-x: hidden;
     height: auto;
-    touch-action: auto; 
+    touch-action: auto;
   }
-
   /* 主卡片容器 */
   .main-card {
     width: 100%;
     max-width: 550px;
     background: #1a1a1a;
-    border-radius: 20px;
-    box-shadow: 0 6px 25px rgba(0,0,0,0.35);
+    border-radius: 24px;
+    box-shadow: 0 8px 30px rgba(0, 200, 255, 0.25);
     overflow: hidden;
     position: relative;
     opacity: 0;
     animation: cardFadeIn 1s ease 0.3s forwards;
     z-index: 10;
-    min-height: 650px;
+    min-height: 620px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px 0;
+    margin: 15px 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
-
   @keyframes cardFadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
-
   /* 图片展示区 */
   .card-img {
-    padding: 20px;
+    padding: 25px 20px 15px;
     margin: 0 auto;
     flex-shrink: 0;
     opacity: 0;
     transform: translateY(20px);
     animation: imgFadeIn 1s ease 0.6s forwards;
-    width: 220px;
+    width: 200px;
   }
   .card-img img {
     width: 100%;
     height: auto;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,255,255,0.2);
-    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 18px;
+    box-shadow: 0 6px 22px rgba(0, 230, 255, 0.28);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    transition: transform 0.3s ease;
+  }
+  .card-img img:hover {
+    transform: scale(1.03);
   }
   @keyframes imgFadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
-
   /* 北京时间展示 */
   .card-time {
     color: #ffffff;
-    font-size: clamp(16px, 4vw, 20px);
-    text-shadow: 0 0 8px #ffffff;
-    margin: 10px 0;
+    font-size: clamp(15px, 3.5vw, 18px);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    margin: 8px 0;
     opacity: 0;
     transform: translateY(20px);
     animation: timeFadeIn 1s ease 1s forwards;
-    letter-spacing: 4px;
-    padding: 0 10px;
+    letter-spacing: 3px;
+    padding: 4px 12px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
   }
   @keyframes timeFadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
-
   /* 卡片头部 */
   .card-header {
-    padding: 20px 20px 30px;
+    padding: 15px 20px 25px;
     text-align: center;
-    background: linear-gradient(135deg, #222, #000);
+    background: linear-gradient(135deg, #2a2a2a, #0a0a0a);
     flex-shrink: 0;
     width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
-
   .card-header h1 {
     color: #ffffff;
-    font-size: clamp(24px, 6vw, 32px);
-    margin: 12px 0;
-    text-shadow: 0 0 10px #ffffff, 5px 4px 10px #255;
+    font-size: clamp(22px, 5vw, 28px);
+    margin: 8px 0;
+    text-shadow: 0 0 12px #ffffff, 0 0 20px rgba(0, 200, 255, 0.5);
     opacity: 0;
     transform: translateY(20px);
     animation: headerFadeIn 1s ease 0.8s forwards;
   }
-
   @keyframes headerFadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
-
   /* 卡片内容区 */
   .card-body {
-    padding: 40px 20px 50px;
+    padding: 30px 20px 40px;
     text-align: center;
     flex-grow: 1;
     display: flex;
@@ -123,109 +126,153 @@
     justify-content: center;
     width: 100%;
   }
-
   .btn-group {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     opacity: 0;
     transform: translateY(20px);
     animation: btnFadeIn 1s ease 1s forwards;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
   }
-
   @keyframes btnFadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
-
   .card-body button {
-    padding: 14px 28px;
-    font-size: 18px;
-    margin: 12px 10px;
-    border-radius: 12px;
+    padding: 14px 24px;
+    font-size: clamp(16px, 3vw, 18px);
+    border-radius: 16px;
     border: none;
-    background: rgba(0,0,0,0.6);
+    background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(50,50,50,0.5));
     color: #ffffff;
     cursor: pointer;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    transition: background 0.2s ease;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    transition: all 0.3s ease;
     -webkit-tap-highlight-color: transparent;
-    min-width: 140px;
-    border: 1px solid rgba(255,255,255,0.3);
+    min-width: 130px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   }
-
   .card-body button:hover {
-    background: rgba(255,255,255,0.2);
-    color: #ffffff;
+    background: linear-gradient(135deg, rgba(255,255,255,0.25), rgba(255,255,255,0.15));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 200, 255, 0.2);
   }
-
+  .card-body button:active {
+    transform: translateY(0);
+  }
   /* 音乐播放器 */
   .drag-music-box {
-    position: fixed; 
-    bottom: 30px;
-    right: 30px;
-    width: 380px;
-    height: 200px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: clamp(280px, 80vw, 380px);
+    height: clamp(140px, 35vw, 200px);
     z-index: 998;
     opacity: 0;
     animation: musicFadeIn 1s ease 1.5s forwards;
     touch-action: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
   }
-
   @keyframes musicFadeIn {
     from { opacity: 0; transform: translate(20px, 20px); }
     to { opacity: 1; transform: translate(0, 0); }
   }
-
   .drag-handle {
     width: 100%;
-    height: 15px;
-    background: rgba(0,0,0,0.8);
+    height: 36px;
+    background: rgba(0,0,0,0.85);
     cursor: move;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #ffffff;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
-    text-shadow: 0 0 4px #ffffff;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    text-shadow: 0 0 6px rgba(255,255,255,0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     -webkit-tap-highlight-color: transparent;
-    border-radius: 8px 8px 0 0;
     border-bottom: 1px solid rgba(255,255,255,0.3);
+    transition: background 0.2s ease;
   }
-
+  .drag-handle:hover {
+    background: rgba(0,0,0,0.95);
+  }
   .music-iframe {
     width: 100%;
-    height: calc(100% - 30px);
+    height: calc(100% - 36px);
     border: none;
-    border-radius: 0 0 8px 8px;
   }
-
-  @media (max-width: 420px) {
+  /* 响应式优化 */
+  @media (max-width: 480px) {
     .drag-music-box {
-      width: 320px;
-      height: 160px;
-      right: 15px;
-      bottom: 15px;
+      right: 10px;
+      bottom: 10px;
     }
     .main-card {
-      min-height: 600px;
+      min-height: 580px;
+      margin: 10px 0;
+      border-radius: 20px;
     }
     .card-img {
-      width: 180px;
+      width: 160px;
+      padding: 20px 15px 10px;
     }
     .card-time {
-      font-size: 16px;
-      letter-spacing: 3px;
+      font-size: 14px;
+      letter-spacing: 2px;
+      padding: 3px 10px;
     }
+    .card-header {
+      padding: 12px 15px 20px;
+    }
+    .card-header h1 {
+      font-size: clamp(20px, 4.5vw, 24px);
+      margin: 6px 0;
+    }
+    .card-body {
+      padding: 25px 15px 30px;
+    }
+    .btn-group {
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+    .card-body button {
+      padding: 12px 20px;
+      min-width: 120px;
+      font-size: 15px;
+    }
+  }
+  /* 加载动画背景点缀 */
+  .bg-dot {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(0, 200, 255, 0.1);
+    animation: float 6s infinite ease-in-out;
+    z-index: 1;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-20px) scale(1.05); }
   }
 </style>
 </head>
 <body>
+  <!-- 背景点缀元素 -->
+  <div class="bg-dot" style="width: 80px; height: 80px; top: 10%; left: 5%; animation-delay: 0s;"></div>
+  <div class="bg-dot" style="width: 120px; height: 120px; top: 30%; right: 8%; animation-delay: 1s;"></div>
+  <div class="bg-dot" style="width: 60px; height: 60px; bottom: 20%; left: 15%; animation-delay: 2s;"></div>
+  
   <div class="main-card">
     <div class="card-img">
-      <img src="https://pan.tenire.com/view.php/0d760576f5c2fd9ea6688c089cc40fed.jpg" alt="故星展示图">
+      <!-- 主展示图：替换为随机图片（200x200尺寸适配展示区，random参数确保每次不同） -->
+      <img src="https://picsum.photos/200/200?random=2" alt="随机展示图">
     </div>
     <div class="card-time" id="beijingTime">2025-12-15 04:09:05</div>
     <div class="card-header">
@@ -234,19 +281,19 @@
     </div>
     <div class="card-body">
       <div class="btn-group">
-        <button onclick="a1()"> 我想对你说的每一句话 </button>
-        <button onclick="a2()"> 🌿福</button>
+        <button onclick="a1()">我想对你说的每一句话</button>
+        <button onclick="a2()">🌿福</button>
       </div>
     </div>
   </div>
-
+  
   <div class="drag-music-box" id="dragMusicBox">
     <div class="drag-handle" id="dragHandle">☰ 拖动调整位置</div>
     <iframe class="music-iframe" frameborder="no" border="0" marginwidth="0" marginheight="0" src="https://music.163.com/outchain/player?type=4&id=979457519&auto=1&height=90"></iframe>
   </div>
 
   <script>
-    // 北京时间更新
+    // 北京时间更新（修复月份/日期补零问题）
     function updateBeijingTime() {
       const now = new Date();
       const year = now.getFullYear();
@@ -259,15 +306,18 @@
     }
     updateBeijingTime();
     setInterval(updateBeijingTime, 1000);
-
-    setTimeout(() => {
-      alert("欢迎进入秋的网站\喜欢我吗🤔");
-    }, 0);
     
+    // 延迟弹窗避免阻塞渲染
+    setTimeout(() => {
+      alert("欢迎进入秋的网站\n喜欢我吗🤔");
+    }, 1500);
+    
+    // 链接跳转优化（添加新窗口提示）
     function a1(){
-      window.open("qiudaoyu0220.github.io");
+      window.open("https://qiudaoyu0220.github.io", "_blank");
     }
-
+    
+    // 文件下载优化（添加下载提示）
     function a2(){
       const fileUrl = 'bdzy/YGX.sh';
       const link = document.createElement('a');
@@ -277,52 +327,72 @@
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+      setTimeout(() => {
+        alert("下载已开始～ 请查收文件🥳");
+      }, 800);
     }
-
-    // 音乐播放器拖动
+    
+    // 音乐播放器拖动（优化触摸体验）
     const dragBox = document.getElementById('dragMusicBox');
     const dragHandle = document.getElementById('dragHandle');
     let isDragging = false;
     let startX, startY;
-
+    
+    // 桌面端拖动
     dragHandle.addEventListener('mousedown', startDrag);
     document.addEventListener('mousemove', dragMove);
     document.addEventListener('mouseup', stopDrag);
+    
+    // 移动端拖动（优化被动事件）
     dragHandle.addEventListener('touchstart', startDrag, {passive: true});
     document.addEventListener('touchmove', dragMove, {passive: false});
     document.addEventListener('touchend', stopDrag);
-
+    document.addEventListener('touchcancel', stopDrag);
+    
     function startDrag(e) {
       isDragging = true;
       const clientX = e.clientX || e.touches[0].clientX;
       const clientY = e.clientY || e.touches[0].clientY;
-      startX = clientX - dragBox.getBoundingClientRect().left;
-      startY = clientY - dragBox.getBoundingClientRect().top;
-      dragHandle.style.background = 'rgba(0,0,0,0.9)';
+      const rect = dragBox.getBoundingClientRect();
+      startX = clientX - rect.left;
+      startY = clientY - rect.top;
+      dragHandle.style.background = 'rgba(0,0,0,0.95)';
+      dragBox.style.zIndex = '999'; // 拖动时置顶
     }
-
+    
     function dragMove(e) {
       if (!isDragging) return;
       e.preventDefault();
       const clientX = e.clientX || e.touches[0].clientX;
       const clientY = e.clientY || e.touches[0].clientY;
+      const rect = dragBox.getBoundingClientRect();
+      
       let newX = clientX - startX;
       let newY = clientY - startY;
-      const maxX = window.innerWidth - dragBox.offsetWidth;
-      const maxY = window.innerHeight - dragBox.offsetHeight;
-      newX = Math.max(0, Math.min(newX, maxX));
-      newY = Math.max(0, Math.min(newY, maxY));
+      
+      // 边界限制（留出10px边距）
+      const maxX = window.innerWidth - rect.width - 10;
+      const maxY = window.innerHeight - rect.height - 10;
+      newX = Math.max(10, Math.min(newX, maxX));
+      newY = Math.max(10, Math.min(newY, maxY));
+      
       dragBox.style.left = newX + 'px';
       dragBox.style.top = newY + 'px';
       dragBox.style.bottom = 'auto';
       dragBox.style.right = 'auto';
     }
-
+    
     function stopDrag() {
       if (!isDragging) return;
       isDragging = false;
-      dragHandle.style.background = 'rgba(0,0,0,0.8)';
+      dragHandle.style.background = 'rgba(0,0,0,0.85)';
+      dragBox.style.zIndex = '998'; // 恢复层级
     }
+    
+    // 页面加载完成提示
+    window.addEventListener('load', () => {
+      console.log("秋老师的祝福网页加载完成～");
+    });
   </script>
 </body>
 </html>
